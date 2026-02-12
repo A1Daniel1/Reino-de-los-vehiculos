@@ -27,12 +27,12 @@ la logica del sistema, el cliente va ir analizando el vehiculo que quiere compra
 
 ### Patron a usar y Justificación
 
-En este caso se escogio Factory. Pues porque lo que tenemos
+En este caso se escogio Abstract Factory. Pues porque lo que tenemos
 es como un catalogo de vehiculos
 
 ### Como lo aplico
 
-![Diagrama de clases](resources/reinoVehiculos.png)
+![Diagrama de clases](resources/diagrama.png)
 
-En este caso lo que hacemos es crear una dos clases principales. Una interfaz vehiculo y un vehiculo factory.
+En este caso lo que hacemos es crear una dos clases principales. Una interfaz vehiculo y un Main que funcione como interfaz del cliente.
 Y de ahi en adelante vamos creando las subclases para cada vehiculo
