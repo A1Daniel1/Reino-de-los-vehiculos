@@ -1,5 +1,5 @@
-public class VehiculoFactory {
-    public VehiculoFactory() {
-        //TODO: llamado a cliente
-    }
+public interface Vehiculo {
+    void crearVehiculoTierra();
+    void crearVehiculoAgua();
+    void crearVehiculoAire();
 }
