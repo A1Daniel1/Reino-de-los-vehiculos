@@ -4,14 +4,20 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 @SpringBootApplication(proxyBeanMethods = false)
 public class App {
     VehiculoFactory factory = new VehiculoFactory();
+    List<Vehiculo> vehiculos;
 
     public static void main(String[] args) {
         SpringApplication.run(App.class, args);
         System.out.println("Bienvenido al reino de vehículos!");
         iniciarCompra();
+        mostrarFactura();
     }
 
-    public void iniciarCompra() {
+
+    /* Metodo para iniciar el formulario de compra
+    *  
+    */
+    public static void iniciarCompra() {
         boolean compraFinalizada = false;
         int tipoVehiculo = 0;
         int categoriaVehiculo = 0;
@@ -33,6 +39,7 @@ public class App {
             categoriaVehiculo = system.in.println("Ingrese opcion: ");
             
             Vehiculo vehiculo = factory.crearVehiculo(tipoVehiculo, categoriaVehiculo);
+            vehiculos.add(vehiculo);
 
             system.out.println("¿Desea agregar otro vehículo? (si/no)");
             String respuesta = system.in.println("Ingrese opcion: ");
@@ -42,5 +49,9 @@ public class App {
                 system.out.println("¡Gracias por su compra!");
             }
         }
+    }
+
+    public void mostrarFactura() {
+        // TODO: mostrar la factura como esta en el teams
     }
 }
